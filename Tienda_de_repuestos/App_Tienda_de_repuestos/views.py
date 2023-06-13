@@ -92,7 +92,7 @@ def add_product(request, product_id):
 
     cart.add_item(product)
 
-    return redirect("App_Tienda_de_repuestos:products")
+    return redirect("App_Tienda_de_repuestos:Cart")
 
 def sub_product(request, product_id):
     cart = Cart(request)
@@ -101,7 +101,7 @@ def sub_product(request, product_id):
 
     cart.subtract_product(product)
 
-    return redirect("App_Tienda_de_repuestos:products")
+    return redirect("App_Tienda_de_repuestos:Cart")
 
 def delete_product(request, product_id):
     cart = Cart(request)
